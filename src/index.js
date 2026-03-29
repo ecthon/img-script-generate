@@ -70,1027 +70,539 @@ const compositionTypes = [
     "path-driven composition guiding the eye across the diorama",
     "clustered village composition with compact storytelling layout",
     "ruin-centered composition embedded into the terrain",
-    "plateau composition with multiple height levels"
+    "plateau composition with multiple height levels",
+
+    "bridge-linked composition connecting two terrain masses",
+    "ring-shaped composition with an open central space",
+    "stair-stepped composition with cascading elevation changes",
+    "edge-weighted composition with a dominant side focal point",
+    "sanctuary composition framed by natural elements",
+    "market-square composition with dense props around a central plaza",
+    "spiral path composition leading toward a high focal landmark",
+    "multi-island composition with separated but connected mini zones"
 ];
 
 const scenarioPools = [
     {
-        id: "snowy_village",
-        name: "Snowy Village",
-        tags: { season: "winter", biome: "snow", architecture: "rustic", mood: "cozy" },
+        id: "frozen_pass",
+        name: "Frozen Pass",
+        tags: { season: "winter", biome: "snow", architecture: "mountain", mood: "quiet" },
         environmentBase: [
-            "cozy snowy village",
-            "miniature winter settlement",
-            "small alpine hamlet"
+            "miniature frozen mountain pass",
+            "small snowy cliffside route",
+            "stylized alpine passage diorama"
         ],
         terrainBase: [
-            "snowy cobblestone paths",
-            "packed snow terraces",
-            "frosted stone paths",
-            "snow-covered platforms"
+            "icy cliff paths",
+            "snow-covered ledges",
+            "frozen stone steps",
+            "wind-carved mountain shelves"
         ],
         structures: [
-            "wooden cabins",
-            "small chapel",
-            "watch tower",
-            "wooden fences",
-            "stone storage hut"
+            "small gatehouse",
+            "stone watch post",
+            "wooden rope bridge",
+            "mountain stairway"
         ],
         nature: [
-            "snow-covered pine trees",
-            "snowy shrubs",
-            "icy rocks",
-            "frozen bushes"
+            "snow-covered pines",
+            "frozen shrubs",
+            "icy rock spires",
+            "snow drifts"
         ],
         props: [
-            "sled",
-            "stacked firewood",
-            "warm lanterns",
-            "stone well",
-            "small crates"
-        ],
-        palette: ["soft winter blues", "white snow", "amber window glow"],
-        moodText: [
-            "cozy and peaceful winter evening",
-            "warm lights contrasting with cold snow"
-        ],
-        extra: [
-            "small self-contained square diorama",
-            "storytelling layout with a clear focal point",
-            "focus on compact winter architecture and layered snow relief"
-        ]
-    },
-
-    {
-        id: "snowy_courtyard",
-        name: "Snowy Courtyard",
-        tags: { season: "winter", biome: "snow", architecture: "courtyard", mood: "peaceful" },
-        environmentBase: [
-            "miniature snowy courtyard village",
-            "small winter stone plaza",
-            "peaceful frosted settlement square"
-        ],
-        terrainBase: [
-            "icy stone courtyard",
-            "wind-swept snow layers",
-            "frozen village square",
-            "frosted paving stones"
-        ],
-        structures: [
-            "stone houses",
-            "arched gate",
-            "courtyard walls",
-            "small bell tower"
-        ],
-        nature: [
-            "snowy shrubs",
-            "frozen hedges",
-            "snow-dusted evergreen trees"
-        ],
-        props: [
-            "lantern posts",
-            "wooden benches",
-            "crate stacks",
-            "snow mounds"
-        ],
-        palette: ["pale blue", "snow white", "warm amber", "cool gray stone"],
-        moodText: [
-            "quiet winter calm",
-            "gentle snowy stillness with warm accents"
-        ],
-        extra: [
-            "focus on courtyard composition instead of water features"
-        ]
-    },
-
-    {
-        id: "forest_glade",
-        name: "Forest Glade",
-        tags: { season: "spring", biome: "forest", architecture: "rustic", mood: "calm" },
-        environmentBase: [
-            "lush forest glade settlement",
-            "tiny woodland clearing village",
-            "miniature forest camp in a grassy clearing"
-        ],
-        terrainBase: [
-            "mossy forest floor",
-            "leaf-covered pathways",
-            "soft dirt clearing",
-            "root-covered ground"
-        ],
-        structures: [
-            "tiny wooden houses",
-            "small storage shed",
-            "wooden fence segments",
-            "forest lookout platform"
-        ],
-        nature: [
-            "rounded trees",
-            "mossy rocks",
-            "flower patches",
-            "bushes"
-        ],
-        props: [
-            "lantern post",
-            "garden stones",
-            "mushroom clusters",
-            "woodpile",
-            "forest signpost"
-        ],
-        palette: ["soft greens", "warm beige stone", "earthy brown", "fresh floral accents"],
-        moodText: [
-            "fresh cheerful calm nature scene",
-            "peaceful spring clearing with soft toy-like charm"
-        ],
-        extra: [
-            "avoid water as the central focal element",
-            "focus on forest floor textures and cozy structures"
-        ]
-    },
-
-    {
-        id: "forest_plateau",
-        name: "Forest Plateau",
-        tags: { season: "spring", biome: "forest", architecture: "rustic", mood: "fresh" },
-        environmentBase: [
-            "miniature forest plateau settlement",
-            "small elevated woodland village",
-            "stylized hilltop forest hamlet"
-        ],
-        terrainBase: [
-            "terraced hills",
-            "grassy layered platforms",
-            "sloped terrain with carved steps",
-            "stacked rocky ledges"
-        ],
-        structures: [
-            "wooden cabins",
-            "small watch platform",
-            "rope fence sections",
-            "elevated hut"
-        ],
-        nature: [
-            "rounded trees",
-            "flower bushes",
-            "mossy stones",
-            "fern clusters"
-        ],
-        props: [
-            "stone stairs",
-            "wooden sign",
+            "warning lanterns",
             "supply crates",
-            "camp lanterns"
+            "wooden signposts",
+            "frozen banners"
         ],
-        palette: ["spring green", "warm wood", "light stone", "soft yellow flowers"],
+        palette: ["icy blue", "snow white", "cold gray stone", "soft amber light"],
         moodText: [
-            "fresh elevated woodland atmosphere",
-            "playful hilltop nature scene"
+            "quiet isolated mountain atmosphere",
+            "cold but charming winter passage"
         ],
         extra: [
-            "use relief and elevation as the main visual interest"
+            "focus on cliffs, paths, and elevation rather than village density"
         ]
     },
 
     {
-        id: "autumn_camp",
-        name: "Autumn Camp",
-        tags: { season: "autumn", biome: "plateau", architecture: "camp", mood: "adventure" },
+        id: "spring_orchard",
+        name: "Spring Orchard",
+        tags: { season: "spring", biome: "grassland", architecture: "rustic", mood: "cheerful" },
         environmentBase: [
-            "stylized autumn campsite",
-            "miniature adventure camp",
-            "small seasonal camp on a plateau"
+            "miniature spring orchard homestead",
+            "small countryside fruit garden",
+            "stylized rural blossom diorama"
         ],
         terrainBase: [
-            "warm earthy ground",
-            "layered rock steps",
-            "soft grass patches",
-            "fallen autumn leaves"
+            "soft dirt orchard paths",
+            "flower-dotted grass",
+            "gentle terraced ground",
+            "warm cultivated soil"
         ],
         structures: [
-            "canvas tents",
-            "wooden supply table",
-            "small lookout point"
+            "small farmhouse",
+            "wooden tool shed",
+            "fenced orchard gate",
+            "tiny produce stall"
         ],
         nature: [
-            "rounded orange trees",
-            "autumn bushes",
-            "rock clusters"
+            "blossom trees",
+            "trimmed bushes",
+            "flower patches",
+            "grassy tufts"
         ],
         props: [
-            "campfire",
-            "cooking pot",
-            "barrels",
-            "lantern",
-            "wooden stools",
-            "map table",
-            "crates"
+            "fruit baskets",
+            "wooden ladders",
+            "watering barrels",
+            "crate stacks",
+            "garden tools"
         ],
-        palette: ["orange", "yellow", "warm brown", "soft green accents"],
+        palette: ["fresh green", "soft pink blossom", "warm beige", "sunny yellow accents"],
         moodText: [
-            "cozy seasonal adventure",
-            "warm exploratory atmosphere"
+            "bright and cheerful countryside bloom",
+            "fresh spring farming atmosphere"
         ],
         extra: [
-            "compact storytelling camp composition"
+            "focus on orchard rows and blossom trees as the main visual interest"
         ]
     },
 
     {
-        id: "autumn_village_square",
-        name: "Autumn Village Square",
-        tags: { season: "autumn", biome: "village", architecture: "courtyard", mood: "warm" },
+        id: "forest_ruin_shrine",
+        name: "Forest Ruin Shrine",
+        tags: { season: "spring", biome: "forest", architecture: "ruins", mood: "mysterious" },
         environmentBase: [
-            "miniature autumn village square",
-            "small seasonal town plaza",
-            "stylized autumn courtyard settlement"
+            "miniature forest ruin shrine",
+            "small overgrown woodland sanctuary",
+            "stylized ancient glade relic site"
         ],
         terrainBase: [
-            "stone courtyard floor",
-            "patterned paving stones",
-            "leaf-covered square",
-            "warm earth-toned pathways"
+            "mossy stone clearings",
+            "root-covered ruin floor",
+            "leafy forest pathways",
+            "broken carved terraces"
         ],
         structures: [
+            "small stone shrine",
+            "collapsed arch",
+            "broken pillars",
+            "carved altar platform"
+        ],
+        nature: [
+            "rounded trees",
+            "mossy stones",
+            "ferns",
+            "forest vines"
+        ],
+        props: [
+            "stone lanterns",
+            "ceremonial fragments",
+            "fallen masonry",
+            "wooden offerings box"
+        ],
+        palette: ["deep forest green", "moss", "weathered stone gray", "soft golden light"],
+        moodText: [
+            "mysterious sacred woodland calm",
+            "ancient ruin atmosphere softened by nature"
+        ],
+        extra: [
+            "keep the composition centered on the shrine and ruin fragments"
+        ]
+    },
+
+    {
+        id: "autumn_harvest_square",
+        name: "Autumn Harvest Square",
+        tags: { season: "autumn", biome: "village", architecture: "market", mood: "warm" },
+        environmentBase: [
+            "miniature autumn harvest square",
+            "small seasonal village market",
+            "stylized countryside harvest plaza"
+        ],
+        terrainBase: [
+            "leaf-covered paving stones",
+            "warm earth-toned square",
+            "patterned courtyard paths",
+            "stone market floor"
+        ],
+        structures: [
+            "market booths",
             "compact village houses",
             "arched entry gate",
-            "market booth",
-            "small clock tower"
+            "storage shed"
         ],
         nature: [
             "orange trees",
+            "planter boxes",
             "trimmed bushes",
-            "planter boxes"
+            "autumn vines"
         ],
         props: [
-            "benches",
+            "pumpkin piles",
+            "apple baskets",
             "lantern posts",
-            "pumpkins",
-            "wooden barrels",
+            "barrels",
             "crate stacks"
         ],
-        palette: ["golden orange", "warm brown", "dusty red", "soft beige"],
+        palette: ["golden orange", "dusty red", "warm brown", "soft beige"],
         moodText: [
-            "warm and welcoming seasonal plaza",
-            "cozy autumn town atmosphere"
+            "warm and festive seasonal market mood",
+            "cozy harvest celebration atmosphere"
         ],
         extra: [
-            "center the composition around a plaza instead of water"
+            "focus on produce, props, and plaza storytelling"
         ]
     },
 
     {
-        id: "japanese_sakura",
-        name: "Japanese Sakura Garden",
-        tags: { season: "spring", biome: "garden", architecture: "japanese", mood: "serene" },
+        id: "japanese_hillside_town",
+        name: "Japanese Hillside Town",
+        tags: { season: "summer", biome: "mountain", architecture: "japanese", mood: "peaceful" },
         environmentBase: [
-            "stylized miniature japanese sakura garden",
-            "small japanese village garden",
-            "peaceful ornamental spring diorama"
+            "stylized miniature japanese hillside town",
+            "small mountain temple village",
+            "peaceful stepped japanese settlement"
         ],
         terrainBase: [
-            "clean stone paths",
-            "trimmed grass",
-            "layered rocks",
-            "ornamental garden paving"
+            "stone terraces",
+            "stepped hillside paths",
+            "garden walkways",
+            "elevated village platforms"
         ],
         structures: [
+            "wooden houses",
             "small shrine",
-            "wooden pavilion",
-            "curved bridge",
             "torii gate",
-            "pagoda-inspired roof detail"
+            "pagoda roof tower"
         ],
         nature: [
-            "sakura trees",
-            "pink blossom canopies",
-            "bamboo accents",
-            "ornamental bushes"
-        ],
-        props: [
-            "stone lanterns",
-            "paper lanterns",
-            "koi pond",
-            "stone basin",
-            "petals scattered on the ground"
-        ],
-        palette: [
-            "soft pink sakura blossoms",
-            "warm wood",
-            "jade green",
-            "light stone gray",
-            "pastel blue water"
-        ],
-        moodText: [
-            "serene elegant peaceful spring atmosphere",
-            "calm ornamental balance"
-        ],
-        extra: [
-            "elegant japanese composition adapted to a compact diorama"
-        ]
-    },
-
-    {
-        id: "japanese_shrine_courtyard",
-        name: "Japanese Shrine Courtyard",
-        tags: { season: "spring", biome: "garden", architecture: "japanese", mood: "elegant" },
-        environmentBase: [
-            "stylized miniature japanese shrine courtyard",
-            "compact sakura shrine forecourt",
-            "ornamental japanese temple plaza"
-        ],
-        terrainBase: [
-            "mossy shrine courtyard",
-            "ornamental stone paving",
-            "clean temple forecourt",
-            "layered garden terraces"
-        ],
-        structures: [
-            "torii gate",
-            "small shrine",
-            "pagoda roof structure",
-            "stone boundary walls"
-        ],
-        nature: [
-            "sakura trees",
+            "ornamental pines",
+            "bamboo clusters",
             "trimmed shrubs",
-            "bamboo accents",
-            "ornamental trees"
+            "mountain flowers"
         ],
         props: [
             "stone lanterns",
             "paper lanterns",
-            "stone basin",
-            "petals on the ground",
-            "wooden prayer plaque details"
+            "wooden railings",
+            "stepping stones",
+            "small bells"
         ],
-        palette: ["soft pink", "warm cedar wood", "jade green", "pale stone gray"],
+        palette: ["warm cedar wood", "jade green", "light stone gray", "soft red accents"],
         moodText: [
-            "elegant and serene ceremonial atmosphere",
-            "peaceful spring shrine setting"
+            "peaceful elevated japanese village atmosphere",
+            "quiet scenic hillside charm"
         ],
         extra: [
-            "focus on courtyard layout and shrine entrance composition"
+            "focus on vertical rhythm, terraces, and shrine framing"
         ]
     },
 
     {
-        id: "zen_garden",
-        name: "Zen Garden",
-        tags: { season: "spring", biome: "garden", architecture: "japanese", mood: "peaceful" },
+        id: "jungle_bridge_crossing",
+        name: "Jungle Bridge Crossing",
+        tags: { season: "summer", biome: "jungle", architecture: "temple", mood: "adventure" },
         environmentBase: [
-            "miniature zen garden diorama",
-            "small ornamental japanese meditation garden",
-            "compact temple-side rock garden"
+            "miniature jungle bridge crossing",
+            "small tropical canyon sanctuary",
+            "stylized overgrown jungle pathway"
         ],
         terrainBase: [
-            "raked gravel ground",
-            "stone garden patterns",
-            "layered ornamental rock base",
-            "trimmed garden paths"
+            "humid rocky terrain",
+            "layered jungle cliffs",
+            "mossy stone platforms",
+            "overgrown carved paths"
         ],
         structures: [
-            "small meditation pavilion",
-            "simple wooden gate",
-            "low garden wall"
-        ],
-        nature: [
-            "bonsai-like trees",
-            "sakura accents",
-            "trimmed bushes",
-            "bamboo details"
-        ],
-        props: [
-            "stone lanterns",
-            "rock clusters",
-            "ceremonial basin",
-            "sand patterns"
-        ],
-        palette: ["soft gray gravel", "muted green", "warm wood", "subtle pink blossom accents"],
-        moodText: [
-            "quiet meditative garden atmosphere",
-            "balanced and calming ornamental composition"
-        ],
-        extra: [
-            "avoid large water elements",
-            "focus on stones, gravel, and minimal elegant composition"
-        ]
-    },
-
-    {
-        id: "jungle_temple",
-        name: "Jungle Temple",
-        tags: { season: "summer", biome: "jungle", architecture: "temple", mood: "mysterious" },
-        environmentBase: [
-            "lush jungle temple environment",
-            "miniature tropical ruin sanctuary",
-            "overgrown jungle diorama"
-        ],
-        terrainBase: [
-            "overgrown stone paths",
-            "mossy ruins",
-            "layered jungle ground",
-            "humid rocky terrain"
-        ],
-        structures: [
-            "ancient stone ruins",
-            "broken pillars",
-            "stone altar",
-            "small rope bridge",
-            "ancient stairs"
+            "rope bridge",
+            "small stone shrine",
+            "ruined archway",
+            "ancient stair segments"
         ],
         nature: [
             "tropical plants",
-            "vines",
-            "jungle bushes",
-            "waterfall foliage"
-        ],
-        props: [
-            "carved stone face",
-            "small waterfall",
-            "ruined gate",
-            "ancient relic detail"
-        ],
-        palette: ["rich greens", "moss", "warm stone", "turquoise water"],
-        moodText: [
-            "mysterious but charming adventure",
-            "humid lush ancient atmosphere"
-        ],
-        extra: [
-            "clear focal ruin integrated into the landscape"
-        ]
-    },
-
-    {
-        id: "jungle_ruin_terrace",
-        name: "Jungle Ruin Terrace",
-        tags: { season: "summer", biome: "jungle", architecture: "ruins", mood: "adventure" },
-        environmentBase: [
-            "miniature jungle ruin terrace",
-            "small overgrown temple plateau",
-            "stylized tropical relic site"
-        ],
-        terrainBase: [
-            "collapsed stone platforms",
-            "overgrown relic floor",
-            "weathered carved terraces",
-            "humid mossy stone layers"
-        ],
-        structures: [
-            "broken pillars",
-            "fragmented temple walls",
-            "ruined archway",
-            "stone stairway"
-        ],
-        nature: [
-            "tropical bushes",
-            "vines",
-            "large leaf plants",
+            "large leaf clusters",
+            "hanging vines",
             "moss-covered rocks"
         ],
         props: [
-            "ancient relic stone",
-            "carved altar",
-            "fallen masonry",
-            "small jungle lantern"
-        ],
-        palette: ["deep green", "warm mossy stone", "earth brown", "turquoise accents"],
-        moodText: [
-            "mysterious jungle exploration mood",
-            "adventurous ruin-focused tropical atmosphere"
-        ],
-        extra: [
-            "focus on ruins and elevation rather than water"
-        ]
-    },
-
-    {
-        id: "desert_outpost",
-        name: "Desert Outpost",
-        tags: { season: "summer", biome: "desert", architecture: "market", mood: "warm" },
-        environmentBase: [
-            "tiny desert outpost",
-            "miniature sandstone settlement",
-            "small canyon market village"
-        ],
-        terrainBase: [
-            "sandy terrain",
-            "layered sandstone",
-            "dusty paths",
-            "dry rock formations"
-        ],
-        structures: [
-            "sandstone buildings",
-            "fabric canopies",
-            "market stall",
-            "small gate structure"
-        ],
-        nature: [
-            "desert shrubs",
-            "small oasis plants",
-            "palm accents"
-        ],
-        props: [
-            "clay jars",
-            "wooden cart",
-            "banner flags",
-            "market props",
-            "oasis detail"
-        ],
-        palette: ["sand", "ochre", "terracotta", "turquoise accents"],
-        moodText: [
-            "warm adventurous sunlit atmosphere",
-            "dry but inviting toy-like scene"
-        ],
-        extra: [
-            "compact market storytelling composition"
-        ]
-    },
-
-    {
-        id: "desert_canyon_settlement",
-        name: "Desert Canyon Settlement",
-        tags: { season: "summer", biome: "desert", architecture: "desert", mood: "adventure" },
-        environmentBase: [
-            "stylized miniature desert canyon settlement",
-            "small sandstone cliffside village",
-            "compact sun-baked canyon outpost"
-        ],
-        terrainBase: [
-            "layered sandstone shelves",
-            "dusty canyon floor",
-            "eroded rock paths",
-            "dry plateau edges",
-            "wind-shaped desert ground"
-        ],
-        structures: [
-            "sandstone houses",
-            "desert stone gate",
-            "fabric shade canopies",
-            "cliffside stairways",
-            "carved rock dwellings"
-        ],
-        nature: [
-            "dry shrubs",
-            "scattered cactus clusters",
-            "small hardy desert plants",
-            "sun-bleached rock formations"
-        ],
-        props: [
-            "clay jars",
-            "market crates",
-            "banner flags",
-            "stone markers",
-            "desert carts",
-            "shaded rest area"
-        ],
-        palette: [
-            "sand",
-            "ochre",
-            "terracotta",
-            "sun-bleached beige",
-            "turquoise cloth accents"
-        ],
-        moodText: [
-            "warm adventurous desert atmosphere",
-            "dry sunlit canyon scene with toy-like charm"
-        ],
-        extra: [
-            "avoid water as the main focal element",
-            "focus on rock formations, shade structures, and layered desert terrain"
-        ]
-    },
-
-    {
-        id: "mesa_ruins",
-        name: "Mesa Ruins",
-        tags: { season: "summer", biome: "desert", architecture: "ruins", mood: "mysterious" },
-        environmentBase: [
-            "stylized ancient mesa ruins",
-            "small desert relic plateau",
-            "miniature forgotten sun temple site"
-        ],
-        terrainBase: [
-            "cracked dry ground",
-            "elevated sandstone terraces",
-            "weathered stone platforms",
-            "dusty ruin pathways"
-        ],
-        structures: [
-            "broken pillars",
-            "ruined archway",
-            "sun altar",
-            "fragmented temple walls"
-        ],
-        nature: [
-            "dry brush",
-            "small desert plants",
-            "eroded stone clusters"
-        ],
-        props: [
             "carved relic stones",
-            "ceremonial steps",
-            "fallen masonry blocks",
-            "ancient banners"
+            "small waterfall",
+            "broken statues",
+            "ceremonial markers"
         ],
-        palette: [
-            "warm sandstone",
-            "dusty orange",
-            "pale beige",
-            "burnt terracotta"
-        ],
+        palette: ["rich green", "warm stone", "humid moss tones", "turquoise accents"],
         moodText: [
-            "mysterious and sun-baked ancient atmosphere"
+            "lush adventurous crossing through ancient jungle ruins",
+            "playful tropical exploration mood"
         ],
         extra: [
-            "focus on ruins and elevation instead of water features"
+            "use the bridge and split terrain masses as the main visual structure"
         ]
     },
 
     {
-        id: "desert_market_courtyard",
-        name: "Desert Market Courtyard",
-        tags: { season: "summer", biome: "desert", architecture: "market", mood: "warm" },
+        id: "desert_oasis_camp",
+        name: "Desert Oasis Camp",
+        tags: { season: "summer", biome: "desert", architecture: "camp", mood: "calm" },
         environmentBase: [
-            "miniature desert market courtyard",
-            "small sandstone trading plaza",
-            "sunlit canyon bazaar diorama"
+            "miniature desert oasis camp",
+            "small shaded oasis retreat",
+            "stylized caravan rest stop"
         ],
         terrainBase: [
-            "stone courtyard floor",
-            "dusty paving stones",
-            "sun-baked market ground",
-            "desert plaza steps"
+            "sandy paths",
+            "sun-baked stone patches",
+            "oasis shoreline ground",
+            "dusty camp platforms"
         ],
         structures: [
-            "market stalls",
-            "canopy-covered booths",
-            "arched desert gate",
-            "sandstone facades"
+            "fabric tents",
+            "shade canopy",
+            "small sandstone shelter",
+            "resting platform"
         ],
         nature: [
-            "small potted desert plants",
+            "palm trees",
+            "oasis plants",
             "dry shrubs",
-            "palm accents"
+            "small reeds"
         ],
         props: [
             "clay jars",
-            "carpet rolls",
-            "crate stacks",
-            "banner flags",
-            "shade screens"
+            "rolled carpets",
+            "supply crates",
+            "camp lanterns",
+            "water basins"
         ],
-        palette: ["sand", "terracotta", "faded red fabric", "warm beige", "turquoise details"],
+        palette: ["sand", "warm beige", "palm green", "turquoise water accents"],
         moodText: [
-            "lively but compact sunlit market atmosphere",
-            "warm desert trade plaza with toy-like charm"
+            "calm refreshing desert refuge mood",
+            "sunlit oasis atmosphere with gentle adventure tone"
         ],
         extra: [
-            "focus on courtyard and market composition"
+            "keep water secondary and use the camp layout as the primary focal structure"
         ]
     },
 
     {
-        id: "lava_forge",
-        name: "Lava Forge",
-        tags: { season: "summer", biome: "volcanic", architecture: "fantasy", mood: "dramatic" },
+        id: "volcanic_shrine",
+        name: "Volcanic Shrine",
+        tags: { season: "summer", biome: "volcanic", architecture: "temple", mood: "mysterious" },
         environmentBase: [
-            "fantasy lava forge environment",
-            "miniature volcanic workshop",
-            "small molten forge settlement"
+            "miniature volcanic shrine",
+            "small obsidian ritual site",
+            "stylized lava-scarred sanctuary"
         ],
         terrainBase: [
-            "dark volcanic rock",
-            "glowing lava cracks",
-            "layered basalt",
-            "carved stone steps"
-        ],
-        structures: [
-            "forge furnace",
-            "workshop tower",
-            "stone bridge",
-            "heavy workshop platform"
-        ],
-        nature: [
-            "lava crystals",
-            "charred rock clusters"
-        ],
-        props: [
-            "anvil",
-            "molten stream",
-            "iron crane",
-            "chains",
-            "glowing forge detail"
-        ],
-        palette: [
-            "charcoal",
-            "glowing orange",
-            "warm yellow",
-            "dark brown metal accents"
-        ],
-        moodText: [
-            "hot dramatic fantasy atmosphere",
-            "powerful glowing volcanic energy"
-        ],
-        extra: [
-            "still fully stylized and toy-like despite the dramatic theme"
-        ]
-    },
-
-    {
-        id: "volcanic_plateau",
-        name: "Volcanic Plateau",
-        tags: { season: "summer", biome: "volcanic", architecture: "fantasy", mood: "dramatic" },
-        environmentBase: [
-            "miniature volcanic plateau",
-            "stylized obsidian highland",
-            "small lava-scarred summit diorama"
-        ],
-        terrainBase: [
-            "cracked basalt terrain",
-            "ash-covered rock floor",
-            "layered volcanic shelves",
-            "obsidian pathways"
+            "cracked basalt floor",
+            "ash-covered platforms",
+            "glowing fissure paths",
+            "obsidian terraces"
         ],
         structures: [
             "stone altar",
-            "ruined forge platform",
             "obsidian archway",
-            "watch platform"
+            "ritual platform",
+            "broken shrine pillars"
         ],
         nature: [
             "lava crystals",
             "charred bushes",
-            "burnt rock spires"
+            "burnt rock clusters",
+            "ash shrubs"
         ],
         props: [
-            "glowing fissures",
+            "ceremonial braziers",
+            "glowing runes",
             "ancient chains",
-            "ceremonial brazier",
             "molten vents"
         ],
-        palette: ["black basalt", "ember orange", "glowing yellow", "ash gray"],
+        palette: ["obsidian black", "ember orange", "ash gray", "glowing yellow"],
         moodText: [
-            "dramatic elevated volcanic tension",
-            "glowing fantasy highland atmosphere"
+            "mysterious dramatic ritual atmosphere",
+            "stylized volcanic tension with magical energy"
         ],
         extra: [
-            "focus on height, rock shelves, and fissures rather than flowing lava rivers"
+            "focus on shrine shapes and glowing fissures rather than industrial forge elements"
         ]
     },
 
     {
-        id: "swamp_village",
-        name: "Swamp Village",
-        tags: { season: "autumn", biome: "swamp", architecture: "rustic", mood: "playful" },
+        id: "swamp_boardwalk_market",
+        name: "Swamp Boardwalk Market",
+        tags: { season: "autumn", biome: "swamp", architecture: "market", mood: "playful" },
         environmentBase: [
-            "charming swamp village",
-            "miniature wetland settlement",
-            "small marshland hamlet"
+            "miniature swamp boardwalk market",
+            "small marsh trading stop",
+            "stylized wetland bazaar diorama"
         ],
         terrainBase: [
-            "muddy terrain",
             "mossy wet ground",
             "shallow marsh pools",
-            "soft bog floor"
+            "muddy boardwalk foundations",
+            "soft bog paths"
         ],
         structures: [
-            "wooden huts",
-            "stilt houses",
-            "crooked boardwalk sections",
-            "small dock"
+            "stilt shops",
+            "wooden boardwalk sections",
+            "small dock",
+            "crooked canopy stalls"
         ],
         nature: [
             "reeds",
-            "giant mushrooms",
             "swamp bushes",
-            "mossy stones"
+            "giant mushrooms",
+            "mossy roots"
         ],
         props: [
             "hanging lanterns",
-            "small boat",
-            "rope walkway",
-            "wooden barrels"
+            "small boats",
+            "barrels",
+            "crate stacks",
+            "rope posts"
         ],
-        palette: ["olive green", "swamp brown", "muted teal", "warm yellow lights"],
+        palette: ["olive green", "muted teal", "moss brown", "warm lantern yellow"],
         moodText: [
-            "mysterious but cute and playful",
-            "foggy marsh charm with a toy-like atmosphere"
+            "playful marsh market full of toy-like charm",
+            "mysterious but friendly swamp atmosphere"
         ],
         extra: [
-            "keep the swamp visually clean and stylized, not gritty"
+            "keep the swamp readable and organized around the boardwalk circulation"
         ]
     },
 
     {
-        id: "swamp_mushroom_grove",
-        name: "Swamp Mushroom Grove",
-        tags: { season: "autumn", biome: "swamp", architecture: "fantasy", mood: "mysterious" },
+        id: "mountain_watchtower",
+        name: "Mountain Watchtower",
+        tags: { season: "spring", biome: "mountain", architecture: "fortified", mood: "fresh" },
         environmentBase: [
-            "miniature mushroom swamp grove",
-            "small fantasy marsh garden",
-            "stylized wetland fungal clearing"
+            "miniature mountain watchtower outpost",
+            "small fortified highland perch",
+            "stylized cliffside lookout diorama"
         ],
         terrainBase: [
-            "muddy grove floor",
-            "mossy wet terrain",
-            "marshy root-covered ground",
-            "soft bog platforms"
+            "rocky ledges",
+            "stacked cliff terraces",
+            "stone switchback paths",
+            "windy highland shelves"
         ],
         structures: [
-            "small hut",
-            "arched root shelter",
-            "tiny swamp shrine"
-        ],
-        nature: [
-            "giant mushrooms",
-            "reeds",
-            "swamp moss",
-            "fungal clusters"
-        ],
-        props: [
-            "glowing lanterns",
-            "wooden signs",
-            "rope fence posts",
-            "stone totems"
-        ],
-        palette: ["olive green", "moss brown", "muted purple", "warm yellow light"],
-        moodText: [
-            "mysterious magical swamp atmosphere",
-            "playful fantasy wetland mood"
-        ],
-        extra: [
-            "use mushrooms and roots as the main visual interest"
-        ]
-    },
-
-    {
-        id: "mountain_hamlet",
-        name: "Mountain Hamlet",
-        tags: { season: "spring", biome: "mountain", architecture: "rustic", mood: "peaceful" },
-        environmentBase: [
-            "miniature mountain hamlet",
-            "small cliffside village",
-            "stylized highland settlement"
-        ],
-        terrainBase: [
-            "layered cliffs",
-            "stone terraces",
-            "sloped paths",
-            "rocky ledges"
-        ],
-        structures: [
-            "stone cottages",
-            "wooden balconies",
-            "hilltop watch platform",
-            "cliffside stairways"
+            "watchtower",
+            "stone outpost wall",
+            "wooden lookout deck",
+            "cliffside stairway"
         ],
         nature: [
             "pine trees",
+            "small shrubs",
             "grass tufts",
-            "rock clusters",
-            "small shrubs"
+            "rock clusters"
         ],
         props: [
-            "stone stairs",
-            "lantern posts",
+            "signal braziers",
             "crate piles",
-            "fence sections"
+            "warning flags",
+            "lantern posts"
         ],
-        palette: ["cool gray stone", "soft green", "warm wood", "clear sky accents"],
+        palette: ["cool gray stone", "soft green", "warm wood", "clear sky blue accents"],
         moodText: [
-            "peaceful elevated village atmosphere",
-            "fresh and airy mountain charm"
+            "fresh airy lookout atmosphere",
+            "elevated defensive perch with playful scale"
         ],
         extra: [
-            "focus on vertical relief and compact cliffside storytelling"
+            "focus on height, visibility, and narrow cliffside circulation"
         ]
     },
 
     {
-        id: "cliffside_sanctuary",
-        name: "Cliffside Sanctuary",
-        tags: { season: "spring", biome: "mountain", architecture: "temple", mood: "serene" },
+        id: "coastal_fishing_hamlet",
+        name: "Coastal Fishing Hamlet",
+        tags: { season: "summer", biome: "coast", architecture: "rustic", mood: "peaceful" },
         environmentBase: [
-            "miniature cliffside sanctuary",
-            "small elevated shrine retreat",
-            "stylized mountain temple perch"
+            "miniature coastal fishing hamlet",
+            "small seaside village diorama",
+            "stylized harbor-edge settlement"
         ],
         terrainBase: [
-            "stacked rocky ledges",
-            "stone terraces",
-            "carved hillside steps",
-            "elevated shrine platforms"
+            "rocky shoreline paths",
+            "weathered dock platforms",
+            "sand-and-stone coastal ground",
+            "gentle cliff edges"
         ],
         structures: [
-            "small shrine",
-            "arched gateway",
-            "stone platform",
-            "prayer pavilion"
+            "wooden cottages",
+            "small dock",
+            "boat shed",
+            "lookout hut"
         ],
         nature: [
-            "ornamental pines",
-            "trimmed bushes",
-            "mountain flowers"
+            "coastal bushes",
+            "sea grass",
+            "rounded rocks",
+            "small palms"
         ],
         props: [
-            "lantern stones",
-            "ceremonial stairs",
-            "small bells",
-            "stone markers"
+            "fishing nets",
+            "wooden boats",
+            "buoys",
+            "barrels",
+            "crate stacks"
         ],
-        palette: ["light stone gray", "soft green", "warm wood", "golden accent lights"],
+        palette: ["sea blue", "sun-bleached beige", "warm wood", "soft green accents"],
         moodText: [
-            "serene elevated sanctuary atmosphere",
-            "quiet contemplative mountain setting"
+            "peaceful seaside village charm",
+            "bright breezy coastal atmosphere"
         ],
         extra: [
-            "avoid water dependence and emphasize height, steps, and sacred architecture"
+            "keep the harbor compact and stylized rather than expansive"
         ]
     },
 
     {
-        id: "meadow_farm",
-        name: "Meadow Farm",
-        tags: { season: "summer", biome: "grassland", architecture: "rustic", mood: "cheerful" },
+        id: "meadow_windmill_square",
+        name: "Meadow Windmill Square",
+        tags: { season: "summer", biome: "grassland", architecture: "village", mood: "cheerful" },
         environmentBase: [
-            "miniature meadow farm",
-            "small countryside homestead",
-            "stylized pastoral diorama"
+            "miniature meadow windmill square",
+            "small countryside village plaza",
+            "stylized rural green diorama"
         ],
         terrainBase: [
-            "grassy terrain",
-            "soft dirt paths",
-            "gentle hill contours",
-            "flower-lined ground"
+            "grassy village ground",
+            "flower-lined dirt paths",
+            "soft hill contours",
+            "stone plaza patches"
         ],
         structures: [
-            "farmhouse",
-            "barn",
             "windmill",
-            "fenced pen"
+            "small cottages",
+            "market table",
+            "fenced garden"
         ],
         nature: [
             "rounded trees",
             "flower patches",
-            "bushes",
-            "hay fields"
+            "trimmed bushes",
+            "grass tufts"
         ],
         props: [
             "hay bales",
-            "wooden cart",
+            "watering barrels",
             "crate stacks",
-            "garden tools",
-            "small scarecrow"
+            "wooden cart",
+            "signpost"
         ],
-        palette: ["fresh green", "sunny yellow", "warm red roof accents", "light brown earth"],
+        palette: ["fresh green", "sunny yellow", "warm beige", "soft red roof accents"],
         moodText: [
-            "bright cheerful countryside atmosphere",
-            "warm playful rural charm"
+            "bright cheerful village square mood",
+            "playful pastoral atmosphere with cozy storytelling"
         ],
         extra: [
-            "focus on fields and farm composition rather than bridges or rivers"
-        ]
-    },
-
-    {
-        id: "ruined_stone_courtyard",
-        name: "Ruined Stone Courtyard",
-        tags: { season: "autumn", biome: "ruins", architecture: "ruins", mood: "mysterious" },
-        environmentBase: [
-            "miniature ruined stone courtyard",
-            "small forgotten relic plaza",
-            "stylized ancient courtyard ruins"
-        ],
-        terrainBase: [
-            "broken ancient pathways",
-            "collapsed stone platforms",
-            "fragmented temple floor",
-            "weathered carved terraces"
-        ],
-        structures: [
-            "ruined arch",
-            "broken pillars",
-            "ancient gate remains",
-            "collapsed wall sections"
-        ],
-        nature: [
-            "overgrown bushes",
-            "mossy stones",
-            "autumn vines"
-        ],
-        props: [
-            "fallen masonry blocks",
-            "ceremonial fragments",
-            "ancient banners",
-            "stone relic pieces"
-        ],
-        palette: ["weathered gray stone", "moss green", "dusty brown", "faded red accents"],
-        moodText: [
-            "mysterious abandoned courtyard atmosphere",
-            "aged relic plaza with soft adventurous mood"
-        ],
-        extra: [
-            "focus on ruins and broken geometry softened into the toy-like style"
+            "center the composition around the windmill and plaza interaction"
         ]
     }
 ];

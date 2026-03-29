@@ -1,0 +1,116 @@
+Generate an image with the specifications: ultra high quality miniature 3D diorama, stylized cartoon toy world, small self-contained environment, square base in isometric view
+
+STYLE REFERENCE: match the visual style of provided reference images — maintain identical level of stylization, proportions, materials, and rendering quality
+
+core style:
+rounded geometry, soft edges, no sharp details
+chibi-like proportions applied to environment
+exaggerated shapes and compact structures
+
+materials:
+toy-like materials (plastic + clay), matte finish
+hand-painted textures with soft gradients
+no realistic textures, no photorealism
+
+composition:
+organic layout, asymmetrical, storytelling scene
+dense but readable placement of elements
+miniature scale, cohesive world
+
+lighting:
+soft global illumination
+ambient occlusion
+subtle bloom
+warm accent lights when applicable
+same lighting behavior across renders
+
+camera:
+same scale
+same camera angle
+consistent isometric framing across renders
+
+render:
+studio product render
+centered floating platform
+single self-contained diorama only
+pure white background
+solid white background (#FFFFFF)
+no gradient background
+no textured background
+no environment background
+no sky
+no backdrop elements
+soft minimal shadow directly under the object only
+no cast shadows spreading on the background
+only subtle contact shadow under the object
+clean isolated subject on white
+4k
+ultra sharp
+clean render
+high detail but simplified geometry
+
+consistency:
+consistent style across renders
+same scale
+same camera angle
+same lighting behavior
+strict style consistency with reference images
+no deviation in material or rendering style
+
+output:
+--ar 1:1 --quality 2
+
+environment:
+stylized alpine passage diorama with wooden rope bridge, small gatehouse, stone watch post, icy rock spires, frozen banners, warning lanterns
+
+terrain:
+wind-carved mountain shelves, icy cliff paths, frozen stone steps
+
+composition:
+courtyard-centered composition with radial details
+
+mood:
+cold but charming winter passage
+
+color palette:
+cold gray stone, soft amber light
+
+important constraints:
+keep rounded geometry, toy-like materials, and soft lighting
+maintain stylized isometric miniature diorama look
+no realism, no photorealism, no sharp edges, no gritty textures
+keep a clean self-contained square base
+avoid competitive arena layout, avoid symmetry, avoid battle elements
+pure white background only
+solid white background (#FFFFFF)
+no gradient background
+no scene background
+no environment around the object
+no backdrop elements
+clean object isolation on white
+soft minimal shadow directly under the object only
+focus on cliffs, paths, and elevation rather than village density
+
+background rules:
+pure white background
+solid white background (#FFFFFF)
+no gradient background
+no textured background
+no scene background
+no environment around the object
+no sky
+no backdrop elements
+clean isolated object on white
+soft minimal contact shadow only
+
+output quality:
+4k
+ultra sharp
+clean render
+consistent style across renders
+same scale
+same camera angle
+same lighting behavior
+
+parameters:
+--ar 1:1 --quality 2
